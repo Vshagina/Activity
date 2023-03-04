@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         super.onStart();
         Toast.makeText(this, "onStart()", Toast.LENGTH_LONG).show();
         Log.d(TAG, "onStart");
+        resetUI();
     }
     @Override
     public void onResume(){
@@ -64,5 +66,9 @@ public class MainActivity extends AppCompatActivity {
         super.onDestroy();
         Toast.makeText(this, "onDestroy()", Toast.LENGTH_LONG).show();
         Log.d(TAG, "onDestroy");
+    }
+    private void resetUI() {
+        Toast.makeText(this, "resetUI()", Toast.LENGTH_LONG).show();
+        Log.d(TAG, "resetUI()");
     }
 }
