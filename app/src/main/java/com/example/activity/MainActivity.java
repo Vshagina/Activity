@@ -9,7 +9,6 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     public static final String TAG = "StartActivity";
-
     private Integer count = 5;
 
     @Override
@@ -69,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, "onDestroy()", Toast.LENGTH_LONG).show();
         Log.d(TAG, "onDestroy");
     }
+
     private void resetUI() {
         ((TextView) findViewById(R.id.txt_counter)).setText(count.toString());
         Toast.makeText(this, "resetUI()", Toast.LENGTH_LONG).show();
